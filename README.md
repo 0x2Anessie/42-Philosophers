@@ -25,13 +25,17 @@ To compile and run tests, run the following commands :
 
 ## External functions used
 
-[pthread_create()]([https://medium.com/@ruinadd/philosophers-42-guide-the-dining-philosophers-problem-893a24bc0fe2](http://manpagesfr.free.fr/man/man3/pthread_create.3.html)) creates a new thread running concurrently with the calling thread.
+[pthread_create](http://manpagesfr.free.fr/man/man3/pthread_create.3.html) : creates a new thread running concurrently with the calling thread.
 
-pthread_join :
-pthread_mutex_init :
-pthread_mutex_lock :
-pthread_mutex_unlock :
-pthread_mutex_destroy :
+[pthread_join](http://manpagesfr.free.fr/man/man3/pthread_join.3.html) : suspends the execution of the calling thread until the thread identified by th completes its execution.
+
+[pthread_mutex_init](http://manpagesfr.free.fr/man/man3/pthread_mutex_init.3.html) : initializes the mutex pointed to by mutex according to the mutex attributes specified by mutexattr . If mutexattr is NULL, the default parameters are used.
+
+[pthread_mutex_lock](http://manpagesfr.free.fr/man/man3/pthread_mutex_init.3.html) : locks the mutex.
+
+[pthread_mutex_unlock](http://manpagesfr.free.fr/man/man3/pthread_mutex_init.3.html) : unlocks the mutex.
+
+[pthread_mutex_destroy](http://manpagesfr.free.fr/man/man3/pthread_mutex_init.3.html) : destroys a mutex, freeing the resources it holds.
 
 ### Documentation
 
