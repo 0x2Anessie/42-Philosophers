@@ -37,7 +37,7 @@ To compile and run tests, run the following commands :
 
 [pthread_mutex_destroy](http://manpagesfr.free.fr/man/man3/pthread_mutex_init.3.html) : destroys a mutex, freeing the resources it holds.
 
-### Documentation
+## Documentation
 
 [To learn more about the Dining Philosopher Problem](https://medium.com/@ruinadd/philosophers-42-guide-the-dining-philosophers-problem-893a24bc0fe2)
 
