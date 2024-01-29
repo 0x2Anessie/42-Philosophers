@@ -6,7 +6,7 @@ It was originally formulated in 1965 by Edsger Dijkstra as a student exam exerci
 
 ## Running Tests
 
-Here, the arguments are in order : 
+The program takes four to five arguments : 
 - The number of philosophers
 - The time a philosopher will die if he doesn’t eat
 - The time it takes a philosopher to eat
