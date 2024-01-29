@@ -25,7 +25,7 @@ To compile and run tests, run the following commands :
 
 ## External functions used
 
-[pthread_create() :]([https://medium.com/@ruinadd/philosophers-42-guide-the-dining-philosophers-problem-893a24bc0fe2](http://manpagesfr.free.fr/man/man3/pthread_create.3.html)) creates a new thread running concurrently with the calling thread.
+[pthread_create()]([https://medium.com/@ruinadd/philosophers-42-guide-the-dining-philosophers-problem-893a24bc0fe2](http://manpagesfr.free.fr/man/man3/pthread_create.3.html)) creates a new thread running concurrently with the calling thread.
 
 pthread_join :
 pthread_mutex_init :
