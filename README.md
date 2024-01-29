@@ -23,6 +23,16 @@ To compile and run tests, run the following commands :
   $> ./philo 5 800 200 200
 ```
 
+## External functions used
+
+[pthread_create() :]([https://medium.com/@ruinadd/philosophers-42-guide-the-dining-philosophers-problem-893a24bc0fe2](http://manpagesfr.free.fr/man/man3/pthread_create.3.html)) creates a new thread running concurrently with the calling thread.
+
+pthread_join :
+pthread_mutex_init :
+pthread_mutex_lock :
+pthread_mutex_unlock :
+pthread_mutex_destroy :
+
 ### Documentation
 
 [To learn more about the Dining Philosopher Problem](https://medium.com/@ruinadd/philosophers-42-guide-the-dining-philosophers-problem-893a24bc0fe2)
