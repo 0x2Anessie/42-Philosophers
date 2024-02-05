@@ -6,7 +6,7 @@
 /*   By: acatusse <acatusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 17:07:02 by acatusse          #+#    #+#             */
-/*   Updated: 2024/01/05 17:07:04 by acatusse         ###   ########.fr       */
+/*   Updated: 2024/02/02 17:15:20 by acatusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,11 @@ void	print_meal(t_philo *philo)
 	if (check_philo_continue(philo->data, philo) != -1)
 	{
 		printf("%ld: 	\033[35mʚ\033[0mphilo %d\033[35mɞ\033[0m has taken a" \
-			" fork\n", philo->last_meal, philo->id);
+			" fork\n", philo->time, philo->id);
 		printf("%ld: 	\033[35mʚ\033[0mphilo %d\033[35mɞ\033[0m has taken a" \
-			" fork\n", philo->last_meal, philo->id);
+			" fork\n", philo->time, philo->id);
 		printf("%ld: 	\033[35mʚ\033[0mphilo %d\033[35mɞ" \
-			"\033[0m \033[32mis eating\n\033[0m", philo->last_meal, philo->id);
+			"\033[0m \033[32mis eating\n\033[0m", philo->time, philo->id);
 	}
 }
 

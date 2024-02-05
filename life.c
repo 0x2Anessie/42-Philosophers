@@ -6,7 +6,7 @@
 /*   By: acatusse <acatusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 17:06:25 by acatusse          #+#    #+#             */
-/*   Updated: 2024/01/05 17:06:28 by acatusse         ###   ########.fr       */
+/*   Updated: 2024/02/02 17:16:17 by acatusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,15 @@ void	eating(t_philo *philo, int first_fork, int second_fork)
 		&& !pthread_mutex_lock(&philo->data->forks[second_fork]))
 	{
 		pthread_mutex_lock(&philo->data->mutex_check);
-		philo->last_meal = get_time(philo->data->t0);
+		philo->time = get_time(philo->data->t0);
 		pthread_mutex_unlock(&philo->data->mutex_check);
 		pthread_mutex_lock(&philo->data->write);
 		print_meal(philo);
 		pthread_mutex_unlock(&philo->data->write);
 		ft_usleep(philo->data, philo->rules.time_to_eat);
 		pthread_mutex_lock(&philo->data->mutex_check);
-		philo->reste_meal--;
-		if (philo->reste_meal == 0)
+		philo->meals_to_eat--;
+		if (philo->meals_to_eat == 0)
 			philo->data->fini--;
 		pthread_mutex_unlock(&philo->data->mutex_check);
 	}

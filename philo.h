@@ -6,7 +6,7 @@
 /*   By: acatusse <acatusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 17:06:45 by acatusse          #+#    #+#             */
-/*   Updated: 2024/01/05 17:08:31 by acatusse         ###   ########.fr       */
+/*   Updated: 2024/02/05 15:25:05 by acatusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ typedef struct s_philo
 	int				first_fork;
 	int				second_fork;
 	int				id;
-	long			last_meal;
-	int				reste_meal;
+	long			time;
+	int				meals_to_eat;
 	t_rules			rules;
 	struct s_data	*data;	
 }	t_philo;
@@ -55,7 +55,7 @@ typedef struct s_data
 	t_rules			global_rules;
 }	t_data;
 
-int		ft_init(t_data *data, char **argv);
+int		philos_and_rules_init(t_data *data, char **argv);
 
 long	get_time(long t0);
 int		ft_atoi(const char *nptr);

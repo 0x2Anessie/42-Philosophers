@@ -6,22 +6,17 @@
 /*   By: acatusse <acatusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 17:06:36 by acatusse          #+#    #+#             */
-/*   Updated: 2024/01/05 17:56:18 by acatusse         ###   ########.fr       */
+/*   Updated: 2024/02/05 15:25:05 by acatusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-/**
- * @used in main
- * @brief 	Detruit les mutex et libere la memoire qui a ete malloc pour les
- * 			fourchettes, les identifiants de threads et les structures des 
- * 			philo.
- * 
- * @include pthread_mutex_destroy qui renvoie une valeur nulle si le mutex
- * 			est detruit et non nulle si il n'a pas pu l'etre.
- * 
- * @return au main le nombre de mutex qui n'ont pas pu etre detruits.
+/*
+	Detruit les mutex et libere la memoire qui a ete malloc pour les
+	fourchettes, les id et les philos.
+	Elle renvoie 0 si le mutex est détruit et sinon le nombre de mutexs
+	qu'elle n'a pas pu détruire.
  */
 int	clean_mutexes_and_data(t_data *data)
 {
@@ -49,6 +44,9 @@ int	clean_mutexes_and_data(t_data *data)
 	return (j);
 }
 
+/*
+	
+*/
 int	ft_init_and_start(t_data *data)
 {
 	int	i;
@@ -77,19 +75,12 @@ int	ft_init_and_start(t_data *data)
 	return (0);
 }
 
-/**
- * @brief 	 
- * 
- * @include check_arg qui verifie la validite des arguments.
- * 
- * @include ft_init initialise les regles avec les arguments, alloue la memoire
- * 			pour fork, thread_ids et philo puis initialise les mutex et les
- * 			philosophes.
- * 
- * @include	ft_init_and_start 
- * 
- * @return 	le nombre de mutex non detruits.
- */
+/*
+	Vérifie, le nombre d'arguments, leur validité, initialise les elements
+	nécesaire au bon fonctionnement du programme, crée les threads et les
+	joints.
+	A la fin du programme, il détruit les mutexs.
+*/
 int	main(int argc, char **argv)
 {
 	t_data	data;
@@ -101,12 +92,12 @@ int	main(int argc, char **argv)
 		return (printf("\033[31mWrong number of arguments !\n\033["));
 	if (check_arg(argc, argv) == 1)
 		return (-1);
-	if (ft_init(&data, argv) == -1)
+	if (philos_and_rules_init(&data, argv) == -1)
 		return (-1);
 	error = ft_init_and_start(&data);
 	if (error == 1)
 		printf("\033[31mProblem creating threads !\n\033[");
 	else if (error == 2)
 		printf("\033[31mProblem joining threads !\n\033[");
-	return (clean_mutexes_and_data(&data)); // POURQQUOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOIII???
+	return (clean_mutexes_and_data(&data)); // POURQQUOOOOOOOOOOOOOOOOOOOOIII???
 }
