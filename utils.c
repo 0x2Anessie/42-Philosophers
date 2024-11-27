@@ -1,21 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: acatusse <acatusse@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/20 17:17:32 by acatusse          #+#    #+#             */
-/*   Updated: 2024/02/27 12:51:16 by acatusse         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "philosophers.h"
 
-/*
-	Atoi basique mais gere le INT_MIN et INT_MAX ce qui aide au parsing parce
-	que le -1 passera pas parse_rules.
-*/
 int	ft_atoi(const char *str)
 {
 	int		i;

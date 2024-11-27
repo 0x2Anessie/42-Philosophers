@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   parsing.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: acatusse <acatusse@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/20 17:16:59 by acatusse          #+#    #+#             */
-/*   Updated: 2024/02/27 12:44:38 by acatusse         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "philosophers.h"
 
 /*
@@ -46,10 +34,6 @@ int	check_arg(int argc, char **argv)
 	return (0);
 }
 
-/*
-	Gere le MAX_INT parce que toutes les rules sont cast en INT. Un overflow
-	renvoie surement une erreur donc il sera parsé dans cette fonction.
-*/
 int	rules_parsing(t_rules *rules)
 {
 	if (rules->nbr_philo <= 0 || rules->time_to_die <= 0 || \

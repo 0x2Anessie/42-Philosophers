@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   philosophers.h                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: acatusse <acatusse@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/05 17:06:45 by acatusse          #+#    #+#             */
-/*   Updated: 2024/02/23 18:14:31 by acatusse         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef PHILOSOPHERS_H
 # define PHILOSOPHERS_H
 
@@ -22,7 +10,7 @@
 # include <errno.h>
 # include <sys/time.h>
 
-# define NICE_PRINT 1
+# define NICE_PRINT 0
 
 typedef struct s_rules
 {
